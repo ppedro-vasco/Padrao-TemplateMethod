@@ -2,8 +2,9 @@ public abstract class Usuario {
     protected String documento;
     protected String nome;
     protected String email;
+    protected boolean situacaoCadastro;
 
-    public abstract String tipoUsuario();;
+    public abstract String tipoUsuario();
 
     public String getDocumento() {
         return documento;
@@ -29,9 +30,23 @@ public abstract class Usuario {
         this.email = email;
     }
 
+    public boolean situacaoCadastro() {
+        return situacaoCadastro;
+    }
+
+    public void cadastrar() {
+        situacaoCadastro = true;
+        System.out.println("Usuário cadastrado com sucesso!");
+    }
+
+    public void cancelarCadastro() {
+        situacaoCadastro = false;
+        System.out.println("Cadastro do usuário cancelado.");
+    }
+
     public String getInfo() {
         String tipoUsuario = tipoUsuario();
-        return "Usuario{" +
+        return "Usuário{" +
                 "documento='" + documento + '\'' +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +

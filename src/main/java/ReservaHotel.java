@@ -36,9 +36,20 @@ public class ReservaHotel extends Reserva {
     }
 
     @Override
-    public String realizarReserva() {
-        // Implemente o código para realizar a reserva de quartos de hotel
-        return "Reserva de hotel realizada.";
+    public String realizarReserva(Usuario usuario) {
+        if (usuario.situacaoCadastro()) {
+            return "Reserva de hotel realizada para o cliente: " + usuario.getInfo();
+        } else {
+            return "Não é possível realizar a reserva de hotel. Usuário não cadastrado.";
+        }
+    }
+    @Override
+    public String cancelarReserva(Usuario usuario) {
+        if (usuario.situacaoCadastro()) {
+            return "Reserva de hotel cancelada para o cliente: " + usuario.getInfo();
+        } else {
+            return "Não é possível cancelar  uma reserva de hotel que não existe. (Usuário não cadastrado.)";
+        }
     }
 
     @Override

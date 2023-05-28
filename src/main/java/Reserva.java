@@ -27,7 +27,8 @@ public abstract class Reserva {
         this.valor = valor;
     }
 
-    public abstract String realizarReserva();
+    public abstract String realizarReserva(Usuario usuario);
+    public abstract String cancelarReserva(Usuario usuario);
 
     public String getTipo() {
         return "Reserva";
