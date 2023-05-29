@@ -48,7 +48,7 @@ class ReservaHotelTest {
     }
 
     @Test
-    void deveCancelarReservaDeHotal(){
+    void deveCancelarReservaDeHotel(){
         ReservaHotel reserva = new ReservaHotel();
 
         UsuarioPessoaFisica usuarioCpf = new UsuarioPessoaFisica();

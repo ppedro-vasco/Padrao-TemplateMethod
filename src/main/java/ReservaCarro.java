@@ -8,7 +8,7 @@ public class ReservaCarro extends Reserva {
     public ReservaCarro() {
         tiposCarro = new ArrayList<>();
         tiposCarro.add("Sedan");
-        tiposCarro.add("SUV ");
+        tiposCarro.add("SUV");
         tiposCarro.add("Minivan");
         tiposCarro.add("Esportivo");
 
@@ -65,8 +65,8 @@ public class ReservaCarro extends Reserva {
     @Override
     public float calcularTotal() {
         float total = 0.0f;
-        for (Float valorQuarto : valoresCarro) {
-            total += valorQuarto;
+        for (Float valorCarro : valoresCarro) {
+            total += valorCarro;
         }
         return total;
     }

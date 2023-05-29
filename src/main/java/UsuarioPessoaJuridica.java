@@ -17,12 +17,10 @@ public class UsuarioPessoaJuridica extends Usuario {
     @Override
     public void cadastrar() {
         situacaoCadastro = true;
-        System.out.println("Usuário cadastrado com sucesso!");
     }
 
     @Override
     public void cancelarCadastro() {
         situacaoCadastro = false;
-        System.out.println("Cadastro do usuário cancelado.");
     }
 }
